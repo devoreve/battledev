@@ -22,12 +22,12 @@ Lignes 2 à N+1 : un chiffre entre 1 et 9 correspondant au numéro de la carte t
 Dans ce cas là on est tenté de faire quelque chose de similaire à ça pour parcourir les numéros de cartes : 
 
 ```php
-for ($i = 1; $i <= $input[0] + 1; $i++) {
+for ($i = 1; $i < $input[0] + 1; $i++) {
     // Traitement
 }
 ```
 
-Ce qui me semble beaucoup trop approximatif. Je recommanderai de plutôt privilégier l'approche suivante :
+Je recommanderai de plutôt privilégier l'approche suivante :
 ```php
 // On retire le premier élément du tableau (le nombre de tirages)
 $totaldraws = array_shift($input);
